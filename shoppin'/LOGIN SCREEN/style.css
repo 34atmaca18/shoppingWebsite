@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+    transition: all ease-in-out 0.5s;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right,white,rgb(107, 107, 107));
+    padding: 50px;
+}
+
+.container {
+    position: relative;
+    width: 740px;
+    height: 400px;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 50px;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 1.5rem 2rem;
+    box-shadow: 5px 5px 10px black;
+}
+
+.container .screen1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
+
+.container .screen1 .sl {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container .screen1 .login {
+    top: -20px;
+    z-index: 10;
+    opacity: 1;
+}
+
+.container.active .login {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.container .screen1 .signin{
+    transform: translateX(0);
+    opacity: 0;
+    z-index: -1;
+}
+
+.container.active .screen1 .signin {
+    transform: translateX(97%);
+    top: -30px;
+    opacity: 1;
+    z-index: 1000;
+}
+
+.container h1 {
+    font-size: 42px;
+    letter-spacing: 0.85px;
+}
+
+.container .screen1 .sl h1 {
+    font-size: 33px;
+}
+
+.container .use {
+    font-size: 12px;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.container form input {
+    width: 90%;
+    height: 35px;
+    margin:2px 0;
+    padding:0 5px ;
+    border-radius: 8px;
+    border: 1px solid black;
+    outline: none;
+    font-size: 14px;
+}
+
+.container form input:focus {
+    border-color: rgba(203, 203, 203, 0.619);
+}
+
+.container form div {
+    font-size: 11px;
+    color: red;
+    font-family: 'Montserrat',sans-serif;
+    width: 90%;
+    text-align: left;
+}
+
+.container .social-icons {
+    display: flex;
+}
+
+.container .social-icons i {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    background-color: white;
+    width: 27px;
+    height: 27px;
+    border: 1.5px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 30%;
+    margin: 16px 0;
+    margin-left: 1.5px;
+}
+
+.container .social-icons i:hover {
+    background-color: black;
+    color: white;
+}
+
+.container .forget-password {
+    font-weight: 400;
+    color: rgb(60, 60, 60);
+    font-size: 12.5px;
+    margin-top: 2px;
+    width: fit-content;
+    border-bottom: 0.5px solid rgb(102, 102, 102);
+}
+
+.container button {
+    width: 120px;
+    height: 35px;
+    color: white;
+    background-color: #777777;
+    text-transform: uppercase;
+    border-radius: 13px;
+    border: 1.5px solid black;
+    font-size: 13px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.container button:hover {
+    background-color: white;
+    color: #525252;
+}
+
+.container .screen2 {
+    top: 0;
+    left: 0;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color: white;
+}
+
+.container .screen2 .toggle {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    transition: all ease-in-out 0.75s;
+    background-color: rgb(61, 61, 61);
+}
+
+.container .screen2 .right{
+    left: 50%;
+    border-radius: 120px 20px 20px 120px;
+}
+
+.container p{
+    font-size: 15px;
+    margin: 17px 0;
+}
+
+.container.active .right {
+    transform: translateX(-100%);
+    opacity: 0;
+    z-index: -100;
+}
+
+.container .left {
+    opacity: 0;
+    transform: translateX(100%);
+    z-index: -1;
+}
+
+.container.active .left {
+    border-radius: 30px 120px 120px 30px;
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 100;
+}
+
+@media screen and (max-width: 950px) {
+    .container {
+        width: 650px;
+    }
+
+    .container .screen1 .sl h1 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container .screen1 .sl h1 {
+        font-size: 35px;
+    }
+
+    body {
+        min-height: 120vh;
+    }
+    .container {
+        height: 100%;
+    }
+    .container .screen1 .sl {
+        width: 100%;
+        height: 50%;
+    }
+
+    .container.active1 .login {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    .container .screen1 .signin{
+        transform: translateY(0);
+        opacity: 0;
+        z-index: -1;
+        top: -30px;
+    }
+
+    .container.active1 .screen1 .signin{
+        transform: translateY(100%);
+        opacity: 1;
+        z-index: 10;
+    }
+
+    .container .screen2 .toggle {
+        width: 100%;
+        height: 50%;
+        border-radius: 0;
+    }
+
+    .container .screen2 .right {
+        left: 0;
+        bottom: 0;
+    }
+
+    .container .screen2 .left {
+        transform: translateX(0);
+        transform: translateY(100%);
+        opacity: 0;
+        z-index: -1;
+    }
+
+    .container.active1 .screen2 .left {
+        opacity: 1;
+        z-index: 100;
+        transform: translateY(0);
+    }
+
+    .container.active1 .screen2 .right {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    body {
+        padding: 20px;
+    }
+
+    .container .screen1 .sl h1 {
+        font-size: 28px;
+    }
+
+    .container h1 {
+        font-size: 28px;
+    }
+
+    .container .screen2 .toggle p {
+        font-size: 14px;
+    }
+}

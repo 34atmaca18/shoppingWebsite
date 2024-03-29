@@ -1,0 +1,679 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&family=Sono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: all ease-in-out 0.35s;
+    list-style: none;
+}
+
+:root {
+    --lg: 40px;
+    --md: 33px;
+    --sm: 25px;
+    --xsm:18px;
+    --adam: #ffffff;
+}
+
+body {
+    min-height: 100vh;
+    padding-bottom:100px;
+}
+
+.navbar {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 150px 60px 150px;
+}
+
+.navbar .navbar-left {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+
+.navbar .navbar-left h1 {
+    font-size: 40px; 
+    color: rgb(60, 60, 60);
+    padding-left: 5px;
+}
+
+.navbar .navbar-left img {
+    position: absolute;
+    width: 70px;
+    height: 35px;
+    top: 30px;
+    right: -30px;
+    z-index: -1;
+}
+
+.navbar .navbar-right {
+    display: flex;
+    gap: 50px;
+    z-index: 5;
+}
+
+.navbar .navbar-right div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.navbar .navbar-right div:hover i {
+    color: rgb(35, 35, 35);
+}
+
+
+.navbar .navbar-right div:hover a {
+    font-size: 20px;
+    color: rgb(60, 60, 60);
+}
+
+.navbar .navbar-right div i {
+    font-size: 28px;
+    color: rgb(60, 60, 60);
+}
+
+.navbar .navbar-right div a {
+    font-family: 'Poppins',sans-serif;
+    color: gray;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.navbar #secenekler {
+    font-size: 35px;
+    display: none;
+    color: gray;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.container {
+    min-height: fit-content;
+    background-color: rgba(128, 128, 128, 0.44);
+    margin: 50px 150px;
+    padding: 30px;
+    border-radius: 50px;
+    box-shadow: -10px 10px 20px;
+}
+
+.container .shopping-container {
+    display: flex;
+}
+
+.container .shopping-container .shopping-left {
+    width: 72%;
+    border-radius: 25px;
+    min-height: 70vh;
+    background-color: rgba(255, 255, 255, 0.512);
+    margin-right: 20px;
+    box-shadow: 5px 5px 20px;
+    padding: 20px;
+    position: relative;
+}
+
+.container .shopping-container .shopping-left .shopping-products {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+.container .shopping-container .shopping-left .shopping-products .shopping-item {
+    display: flex;
+    width: 100%;
+    height: 130px;
+    gap: 20px;
+    background-color: rgba(128, 128, 128, 0.529);
+    padding: 15px;
+    border-radius: 7px;
+    position: relative;
+}
+
+.container .shopping-container .shopping-left .shopping-products .shopping-item img {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(226, 226, 226, 0.368);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+    cursor: pointer;
+}
+
+.container .shopping-container .shopping-left .shopping-products .shopping-item img:hover {
+    filter:brightness(30%);
+}
+
+.container .shopping-container .shopping-left .shopping-products .shopping-item .items-info {
+    font-family: 'Montserrat',sans-serif;
+}
+
+.container .shopping-container .shopping-left .shopping-products .shopping-item .items-info .name {
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.container .shopping-container .shopping-left .shopping-products .shopping-item .items-info .properties {
+    font-size: 14.5px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.container .shopping-container .shopping-left .shopping-products .shopping-item .items-info .properties:hover,
+.container .shopping-container .shopping-left .shopping-products .shopping-item .items-info .name:hover {
+    color: white;
+}
+
+.container .shopping-container .shopping-left .shopping-products .shopping-item .items-info .item-prices {
+    margin-top: 25px;
+    font-size: 19px;
+
+}
+
+.container .shopping-container .shopping-left .shopping-products .shopping-item .items-info .increase {
+    margin-top: 16px;
+    width: 80px;
+    padding: 0 8px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    border: 1.5px solid rgb(0, 0, 0);
+    align-items: center;
+    border-radius: 30px;
+    font-family: 'Montserrat',sans-serif;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.container .shopping-container .shopping-left .shopping-products .shopping-item .items-info .increase i {
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.container .shopping-container .shopping-left .shopping-products .shopping-item .items-info .increase i:hover {
+    color: white;
+}
+
+.container .shopping-container .shopping-left .shopping-products .shopping-item .items-info .increase:hover {
+    border-color: white;
+}
+
+.container .shopping-container .shopping-left .shopping-products .shopping-item .crossmark {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    color: white;
+    font-size: 16px;
+    display: none;
+    cursor: pointer;
+}
+
+.container .shopping-container .shopping-left .shopping-products .shopping-item .crossmark:hover {
+    color: black;
+}
+
+.container .shopping-container .shopping-left .shopping-products .shopping-item:hover .crossmark {
+    display: block;
+}
+
+.container .shopping-container .shopping-left #empty {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+}
+
+.container .shopping-container .shopping-left #empty span {
+    font-size: 16px;
+    font-family: 'poppins',sans-serif;
+}
+
+.container .shopping-container .shopping-left #empty i {
+    font-size: 18px;
+}
+
+.container .shopping-container .shopping-left #empty:hover {
+    width: fit-content;
+    border-bottom: 1.3px solid black;
+    transform: scale(0.94);
+}
+
+.container .shopping-container .shopping-right {
+    background-color: rgba(255, 255, 255, 0.512);
+    width: 28%;
+    min-height: 70vh;
+    border-radius: 25px;
+    box-shadow: 5px 5px 20px;
+    padding: 20px;
+    font-family: 'Montserrat',sans-serif;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.container .shopping-container .shopping-right h1 {
+    font-size: var(--lg);
+    border-bottom: 3px solid black;
+    width: fit-content;
+}
+
+.container .shopping-container .shopping-right h2 {
+    margin-top: 20px;
+    font-size: 28px;
+}
+
+.container .shopping-container .shopping-right #price {
+    font-size: 20px;
+}
+
+.container .shopping-container .shopping-right #check {
+    margin-top: 20px;
+}
+
+.container .shopping-container .shopping-right .buttons {
+    margin-top: auto;
+    width: 100%;
+}
+
+.container .shopping-container .shopping-right .buttons h3 {
+    font-size: 22px;
+}
+
+.container .shopping-container .shopping-right .buttons .coupon {
+    display: flex;
+    width: 100%;
+    margin: 5px 0 50px 0;
+}
+
+.container .shopping-container .shopping-right .buttons .coupon input {
+    width: 70%;
+    outline: none;
+    height: 50px;
+    background-color: rgba(185, 185, 185, 0.414);
+    border: 2px solid rgb(0, 0, 0);
+    padding-left: 10px;
+    border-radius: 7px 0 0 7px;
+    font-size: 18px;
+}
+
+.container .shopping-container .shopping-right .buttons .coupon input:focus,
+.container .shopping-container .shopping-right .buttons .coupon input:focus ~ a {
+    border-color: rgb(255, 255, 255);
+}
+
+.container .shopping-container .shopping-right .buttons .coupon input:focus ~ a {
+    background-color: gray;
+    color: white;
+}
+
+.container .shopping-container .shopping-right .buttons .coupon a{
+    height: 50px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 2px solid black;
+    border-left: 0;
+    color: rgb(86, 86, 86);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.container .shopping-container .shopping-right .buttons .coupon a:hover {
+    font-size: 110%;
+    background-color: gray;
+    color: white;
+}
+
+.container .shopping-container .shopping-right .buttons .complete {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .shopping-container .shopping-right .buttons #last-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.container .shopping-container .shopping-right .buttons .complete a {
+    width: 230px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    border-radius: 7px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.container .shopping-container .shopping-right .buttons .complete a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    transition: all ease-in-out 0.5s;
+    z-index: -1;
+}
+.container .shopping-container .shopping-right .buttons .complete a:hover {
+    color: rgb(78, 78, 78);
+    font-weight: 700;
+}
+
+.container .shopping-container .shopping-right .buttons .complete a:hover::before {
+    width: 100%;
+}
+
+@media screen and (max-width: 1600px) {
+    .navbar {
+        padding: 80px;
+    }
+
+    .navbar .navbar-left h1 {
+        font-size: var(--md);
+    }
+
+    .navbar .navbar-left img {
+        width: 55px;
+        height: 27px;
+        top: 25px;
+    }
+
+    .navbar .navbar-right div i {
+        font-size: 23px;
+    }
+
+    .navbar .navbar-right div a {
+        font-size: 20px;
+    }
+
+    .navbar .navbar-right div:hover a {
+        font-size: 18px;
+    }
+    .container {
+        margin: 50px 70px;
+    }
+
+    .container .shopping-container .shopping-left .shopping-products .shopping-item .items-info .name {
+        font-size: 23px;
+    }
+    
+    .container .shopping-container .shopping-left .shopping-products .shopping-item .items-info .properties {
+        font-size: 12.5px;
+    }
+
+    .container .shopping-container .shopping-left #empty span {
+        font-size: 14px;
+    }
+    
+    .container .shopping-container .shopping-left #empty i {
+        font-size: 16px;
+    }
+
+    .container .shopping-container .shopping-right h1 {
+        font-size: 27px;
+    }
+    
+    .container .shopping-container .shopping-right h2 {
+        font-size: 23px;
+    }
+
+    .container .shopping-container .shopping-right .buttons h3 {
+        font-size: 21px;
+    }
+
+    .container .shopping-container .shopping-right #price {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container .shopping-container .shopping-left {
+        width: 60%;
+    }
+    .container .shopping-container .shopping-right {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .navbar #secenekler {
+        display: block;
+        font-size: 20px;
+    }
+
+    .navbar .navbar-right div a:hover {
+        font-size: 21px;
+    }
+    .navbar .navbar-right {
+        transform: translateX(-100%);
+        opacity: 0;
+        right: 0;
+        top: 0;
+        position: absolute;
+        flex-direction: column;
+        gap: 42px;
+        justify-content: initial !important;
+        width: 65%;
+        background-color: rgb(139, 139, 139);
+        height: 100vh;
+        padding: 60px 23px 60px 23px;
+        border-radius: 3px 0 0 30%;
+    }
+
+    .navbar .navbar-right div {
+        justify-content: initial;
+    }
+
+    .navbar .navbar-right div i {
+        font-size: 38px;
+    }
+
+    .navbar .navbar-right div a {
+        font-size: 28px;
+        color: white;
+    }
+
+    .container .shopping-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .container .shopping-container .shopping-left {
+        width: 100%;
+        min-height: 10vh;
+        padding-bottom: 80px;
+    }
+    .container .shopping-container .shopping-right {
+        width: 100%;
+    }
+
+    .container .shopping-container .shopping-left .shopping-products .shopping-item .crossmark {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .navbar {
+        padding: 20px;
+        height: 90px;
+    }
+
+    .container {
+        margin: 50px 20px;
+        padding: 30px 15px 30px 15px; 
+        box-shadow: none;
+        border-radius: 10px;
+    }
+
+    .navbar .navbar-right div i {
+        font-size: 30px;
+    }
+
+    .navbar .navbar-right div a {
+        font-size: 23px;
+        color: white;
+    }
+
+    .navbar .navbar-right div:hover a {
+        font-size: 20px;
+    }
+
+    .container .shopping-container .shopping-left,.container .shopping-container .shopping-right {
+        border-radius: 10px;
+    }
+
+    .container .shopping-container .shopping-left #empty span {
+        font-size: 11px;
+    }
+    
+    .container .shopping-container .shopping-left #empty i {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .container .shopping-container .shopping-left .shopping-products .shopping-item img {
+        width: 50px;
+        height: 50px;
+        border: 1px solid rgb(0, 0, 0);
+    }
+
+    .container .shopping-container .shopping-left .shopping-products .shopping-item {
+        height: fit-content;
+        padding: 10px 10px 70px 10px;
+    }
+
+    .container .shopping-container .shopping-left .shopping-products .shopping-item img {
+        box-shadow: -3px 2px 15px black;
+    }
+
+    .container .shopping-container .shopping-left .shopping-products .shopping-item .items-info .item-prices {
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+    }
+    .container .shopping-container .shopping-left .shopping-products .shopping-item .items-info .increase {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .container .shopping-container .shopping-right h1 {
+        font-size: 22px;
+    }
+    
+    .container .shopping-container .shopping-right h2 {
+        font-size: 20px;
+    }
+
+    .container .shopping-container .shopping-right .buttons h3 {
+        font-size: 18px;
+    }
+
+    .container .shopping-container .shopping-right #price {
+        font-size: 16px;
+    }
+
+    .container .shopping-container .shopping-right .buttons .coupon {
+        margin-bottom: 30px;
+    }
+
+    .container .shopping-container .shopping-right .buttons .coupon input,
+    .container .shopping-container .shopping-right .buttons .coupon a {
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .navbar {
+        padding: 20px;
+    }
+
+    .navbar .navbar-right div i {
+        font-size: 22px;
+    }
+
+    .navbar .navbar-right div a {
+        font-size: 16px;
+        color: white;
+    }
+
+    .navbar .navbar-right div:hover a {
+        font-size: 14px;
+    }
+
+    .container .shopping-container .shopping-left .shopping-products .shopping-item {
+        padding: 25px 7px 70px 7px;
+    }
+
+}
+
+@media screen and (max-width: 430px){
+    .container{
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .container .shopping-container {
+        gap: 20px;
+    }
+
+    .container .shopping-container .shopping-left {
+        border-radius: 10px;
+        padding: 10px 10px 50px 10px;
+    }
+
+    .container .shopping-container .shopping-left .shopping-products .shopping-item {
+        gap: 7.5px;
+    }
+
+    .container .shopping-container .shopping-left .shopping-products .shopping-item .items-info .name {
+        margin-top: -3px;
+        font-size: 20px;
+    }
+
+    .container .shopping-container .shopping-left .shopping-products .shopping-item .items-info .properties {
+        font-size: 12px;
+    }
+
+    .container .shopping-container .shopping-left #empty {
+        right: 10px;
+        bottom: 10px;
+    }
+    
+}

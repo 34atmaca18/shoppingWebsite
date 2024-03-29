@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Card</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="../main/index.html" class="navbar-left">
+            <h1><i>quickbuy</i></h1>
+            <span>
+                <img src="../images/logo.png" alt="Logo">
+            </span>
+        </a>
+        <div class="navbar-right" id="right">
+            <div class="products">  
+                <i class="fa-solid fa-inbox"></i>
+                <a href="#products">Products</a>
+            </div>
+            <div class="my-purchases">
+                <i class="fa-solid fa-box"></i>
+                <a href="#mypurchases">Purchases</a>
+            </div>
+            <div class="my-account">
+                <i class="fa-solid fa-user"></i>
+                <a href="../LOGIN SCREEN/login.html">My Account</a>
+            </div>
+        </div>
+        <div id="secenekler">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <div id="container" class="container">
+        <div class="shopping-container">
+            <div class="shopping-left">
+                <ul class="shopping-products" id="shopping-products">
+                    <!--!create element from js-->
+                </ul>
+                <div id="empty">
+                    <span>Empty the Card</span>
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+            </div>
+            <div class="shopping-right" id="shopping-right">
+                <h1>Shopping Card</h1>
+                <h2>Total</h2>
+                <div id="price">1360$</div>
+                <div id="check">
+                    <input type="checkbox" name="standard" id="standart"><span><i>Standart</i> (No Charge)</span><br>
+                </div>
+                <div>
+                    <input type="checkbox" name="fast" id="fast"><span><i>Fast</i> (Add 13.99$)</span>
+                </div>
+                <div class="buttons">
+                    <h3>Coupon</h3>
+                    <div class="coupon">
+                        <input type="text">
+                        <a href="#apply">Apply</a>
+                    </div>
+                    <div id="last-price">1360$</div>
+                    <div class="complete"><a href="#complete-purchase">Complete Shopping</a></div>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
